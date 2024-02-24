@@ -13,7 +13,7 @@ def koch_snowflake(t, order, size):
         koch_curve(t, order, size)
         t.right(120)
 
-def draw_koch_curve(order, size=200):
+def draw_koch_curve(order=3, size=200):
 	window = turtle.Screen()
 	window.bgcolor('violet')
 		
@@ -29,4 +29,7 @@ def draw_koch_curve(order, size=200):
 	window.exitonclick()
 
 if __name__ == "__main__":
-	draw_koch_curve(3)
+    rec_level = input('Please enter the recursion level: ')
+    rec_level = int(rec_level) if rec_level else 3
+
+    draw_koch_curve(rec_level)
